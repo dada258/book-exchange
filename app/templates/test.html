@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1>test网页</h1>
+<h2>{{data.age}}</h2>
+<h2>
+    {% if data.age > 18 %}
+        已经成年
+    {% elif data.age %}
+        {{ data|length() }}
+        {{ data.school |default('未名')}}
+        {% set messages = get_flashed_messages() %}
+        {{ messages }}
+    {% endif %}
+</h2>
+{#pycharm的模板层使用的是jinjia2这个第三方库#}
+{% endblock %}
