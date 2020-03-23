@@ -33,7 +33,6 @@ def search():
         q = form.q.data.strip()
         page = form.page.data
         #a = request.args.to_dict()
-        print('访问了search页面')
         isbn_or_key = is_isbn_or_key(q)
         yushu_book = YuShuBook()
 

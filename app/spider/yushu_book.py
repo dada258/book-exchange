@@ -11,7 +11,6 @@ class YuShuBook:
 
     def search_by_isbn(self,isbn):
         url = self.isbn_url.format(isbn)
-        print(url)
         result = HTTP.get(url)
 
         self.__fill_single(result)
